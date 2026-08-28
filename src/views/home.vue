@@ -19,9 +19,12 @@ function submitCommand() {
 </script>
 
 <template>
-  <section class="home">
-    <h1>Chat Geppetto</h1>
-    <div class="output">
+  <main class="home">
+    <header>
+      <h1>Chat Geppetto</h1>
+      <button type="button" @click="messages.clearMsgs">x</button>
+    </header>
+    <section class="output">
       <TextBubble
         v-for="(message, index) in messages.chat"
         :key="index"
@@ -34,10 +37,10 @@ function submitCommand() {
           {{ message.content }}
         </template>
       </TextBubble>
-    </div>
-    <div class="input">
+    </section>
+    <section class="input">
       <textarea id="command" v-model="cmd" @keydown.enter.prevent="submitCommand" />
       <button type="button" @click="submitCommand">▶</button>
-    </div>
-  </section>
+    </section>
+  </main>
 </template>

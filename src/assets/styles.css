@@ -40,7 +40,7 @@ body {
   color: var(--fg);
 }
 
-section.home {
+main.home {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -48,17 +48,38 @@ section.home {
   padding: 1rem;
   gap: 1rem;
 
-  h1 {
-    margin: 0;
-    text-transform: uppercase;
+  header {
+    h1 {
+      margin: 0;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-block;
+    }
+
+    button {
+      font-size: 2rem;
+      color: var(--danger);
+    }
+  }
+
+  button {
+    background-color: transparent;
     color: var(--accent);
+    border-radius: 10px;
+    border: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+
+    &:hover {
+      color: var(--fg);
+      cursor: pointer;
+    }
   }
 
   .output {
     flex-grow: 1;
     padding: 1rem;
     border-radius: 5px;
-    /* max-height: 50vh; */
     overflow-y: auto;
     border: 1px solid var(--accent);
 
@@ -68,20 +89,21 @@ section.home {
       margin: 0 0 1rem;
 
       &:has(.error) span {
-        border-color: var(--danger);
-        color: var(--danger);
+        background-color: var(--danger);
       }
 
       &.me {
         justify-content: end;
         > span {
-          border-color: var(--accent);
+          background-color: var(--accent);
         }
       }
 
       > span {
+        background-color: var(--fg);
         border-radius: 5px;
-        border: 1px solid var(--fg);
+        border: 0;
+        color: var(--bg);
         padding: 0.5rem;
       }
     }
@@ -89,6 +111,12 @@ section.home {
 
   .input {
     position: relative;
+
+    button {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
 
     #command {
       display: block;
@@ -108,24 +136,6 @@ section.home {
         &::before {
           content: 'Ask me anything';
         }
-      }
-    }
-
-    button {
-      background-color: transparent;
-      color: var(--accent);
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      border-radius: 10px;
-      border: 0;
-      padding: 0.25rem 0.5rem;
-      font-size: 1rem;
-      display: flex;
-
-      &:hover {
-        color: var(--fg);
-        cursor: pointer;
       }
     }
   }
