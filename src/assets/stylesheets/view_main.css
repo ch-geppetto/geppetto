@@ -49,6 +49,7 @@ main.home {
       display: flex;
       width: 100%;
       margin: 0 0 1rem;
+      white-space: break-spaces;
 
       &:has(.error) span {
         background-color: var(--danger);
@@ -67,6 +68,11 @@ main.home {
         border: 0;
         color: var(--background);
         padding: 0.5rem;
+
+        > time {
+          display: block;
+          font-size: 0.7rem;
+        }
       }
     }
   }

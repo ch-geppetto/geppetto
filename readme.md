@@ -66,3 +66,20 @@ To further demonstrate your seniority or attention to detail, consider adding:
 │                                 ■ │
 └───────────────────────────────────┘
 ```
+
+## ------ Tasks
+
+- [x] Build Spinner
+- [x] Build TextBubble
+- [x] Build Alert
+- [x] Connect hugging face API
+
+- [x] Add themes
+- [x] Add store to manage the UI state
+- [x] Add local storage to preserve chat
+
+- [] Add markdown parser (still testing)
+
+- [] Missing date from messages
+- [] Missing development flag to hide debug when not on it
+- [] Instructions on how to run the server with different modes

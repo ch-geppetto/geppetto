@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import Spinner from '@/components/spinner.vue'
 import TextBubble from '@/components/text-bubble.vue'
 import Alert from '@/components/alert.vue'
-import { sendCommand } from '@/composables/chat.js'
+import { sendCommand } from '@/composables/chat'
 import { useMessages } from '@/stores/messages'
 import { toMarkdown } from '@/utils/toMarkdown'
 
@@ -49,6 +49,7 @@ function submitCommand() {
         <template v-else>
           {{ message.content }}
         </template>
+        <time :datetime="message.date">{{ message.date }}</time>
       </TextBubble>
       <TextBubble class="system" v-if="messages.isLoading">
         <Spinner />

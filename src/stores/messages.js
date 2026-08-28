@@ -8,8 +8,7 @@ export const useMessages = defineStore('messages', () => {
   const isLoading = ref(false)
 
   function addMsg(content, role) {
-    chat.value.push({ content, role })
-
+    chat.value.push({ content, role, date: new Date().toISOString() })
     saveMsgs()
   }
 
