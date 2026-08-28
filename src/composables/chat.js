@@ -1,9 +1,16 @@
-const max_len = 10
+import { useMessages } from '@/stores/messages'
+
+const max_len = 255
 
 function sendCommand(cmd) {
-  if (cmd !== '' && cmd.length < max_len) {
-    alert(cmd)
+  const command = cmd.trim()
+  if (command === '' || command.length > max_len) {
+    return
   }
+
+  const messages = useMessages()
+  messages.addMsg(command, 'user')
+  return true
 }
 
 export { sendCommand }

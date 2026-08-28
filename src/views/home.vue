@@ -1,23 +1,40 @@
 <script setup>
+import { ref } from 'vue'
 import Spinner from '@/components/spinner.vue'
 import TextBubble from '@/components/text-bubble.vue'
 import Alert from '@/components/alert.vue'
 import { sendCommand } from '@/composables/chat.js'
+import { useMessages } from '@/stores/messages'
+const messages = useMessages()
+let cmd = ref('')
 
-let cmd = ''
+function submitCommand() {
+  if (sendCommand(cmd.value)) {
+    cmd.value = ''
+  }
+}
 </script>
 
 <template>
   <section class="home">
     <h1>Chat Geppetto</h1>
     <div class="output">
-      <TextBubble class="me">Hola</TextBubble>
-      <TextBubble><Spinner /></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
+      <TextBubble
+        v-for="(message, index) in messages.chat"
+        :key="index"
+        :class="{ me: message.role === 'user' }"
+      >
+        <template v-if="message.role === 'system-error'">
+          <Alert>Error!</Alert>
+        </template>
+        <template v-else>
+          {{ message.content }}
+        </template>
+      </TextBubble>
     </div>
     <div class="input">
-      <textarea id="command" v-model="cmd" @keydown.enter.prevent="sendCommand(cmd)" />
-      <button type="button" @click="sendCommand(cmd)">▶</button>
+      <textarea id="command" v-model="cmd" @keydown.enter.prevent="submitCommand" />
+      <button type="button" @click="submitCommand">▶</button>
     </div>
   </section>
 </template>
