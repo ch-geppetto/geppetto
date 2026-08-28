@@ -55,9 +55,9 @@ main.home {
       display: flex;
       width: 100%;
       margin: 0 0 1rem;
-      white-space: break-spaces;
 
       &.user {
+        white-space: break-spaces;
         justify-content: end;
         padding-left: 2rem;
 
