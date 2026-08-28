@@ -1,7 +1,3 @@
 <template>
-  <p class="text-bubble">
-    <span>
-      <slot />
-    </span>
-  </p>
+  <pre class="text-bubble"><span><slot /></span></pre>
 </template>

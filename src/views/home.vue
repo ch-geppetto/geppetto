@@ -31,7 +31,7 @@ function submitCommand() {
         :class="{ me: message.role === 'user' }"
       >
         <template v-if="message.role === 'system-error'">
-          <Alert>{{ message.content }}</Alert>
+          <Alert class="error">{{ message.content }}</Alert>
         </template>
         <template v-else>
           {{ message.content }}
@@ -48,7 +48,8 @@ function submitCommand() {
         <textarea
           id="command"
           v-model="cmd"
-          @keydown.enter.prevent="submitCommand"
+          rows="1"
+          @keydown.enter.exact.prevent="submitCommand"
           placeholder="Ask something..."
         />
 

@@ -4,7 +4,7 @@
   --fg: #ece1d7;
   --bg: #161413;
   --accent: #ebc06e;
-  --danger: #e24848;
+  --danger: #cf7070;
 }
 
 ::-webkit-scrollbar {
@@ -125,7 +125,7 @@ main.home {
       right: 1rem;
     }
 
-    #command {
+    textarea {
       display: block;
       border-radius: 5px;
       border: 1px solid var(--accent);
@@ -133,7 +133,6 @@ main.home {
       padding: 1rem;
       padding-inline-end: 3rem;
       width: 100%;
-      height: auto;
       font-size: 1rem;
       color: var(--fg);
       margin: 0;
