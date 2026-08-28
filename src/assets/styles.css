@@ -91,16 +91,18 @@ section.home {
     position: relative;
 
     #command {
+      display: block;
       border-radius: 5px;
       border: 1px solid var(--accent);
+      background-color: transparent;
       padding: 1rem;
       padding-inline-end: 3rem;
       width: 100%;
+      height: auto;
       font-size: 1rem;
       color: var(--fg);
-      max-height: 30vh;
-      overflow-y: auto;
       margin: 0;
+      resize: none;
 
       &:empty {
         &::before {
@@ -110,17 +112,19 @@ section.home {
     }
 
     button {
-      background-color: var(--accent);
+      background-color: transparent;
+      color: var(--accent);
       position: absolute;
       bottom: 1rem;
       right: 1rem;
       border-radius: 10px;
-      padding: 0.25rem 0.5rem;
       border: 0;
+      padding: 0.25rem 0.5rem;
+      font-size: 1rem;
       display: flex;
 
       &:hover {
-        background-color: var(--fg);
+        color: var(--fg);
         cursor: pointer;
       }
     }

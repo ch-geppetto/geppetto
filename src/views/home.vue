@@ -2,6 +2,9 @@
 import Spinner from '@/components/spinner.vue'
 import TextBubble from '@/components/text-bubble.vue'
 import Alert from '@/components/alert.vue'
+import { sendCommand } from '@/composables/chat.js'
+
+let cmd = ''
 </script>
 
 <template>
@@ -11,20 +14,10 @@ import Alert from '@/components/alert.vue'
       <TextBubble class="me">Hola</TextBubble>
       <TextBubble><Spinner /></TextBubble>
       <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
-      <TextBubble><Alert class="error">Error!</Alert></TextBubble>
     </div>
     <div class="input">
-      <p contenteditable="true" id="command"></p>
-      <button type="button">▶</button>
+      <textarea id="command" v-model="cmd" @keydown.enter.prevent="sendCommand(cmd)" />
+      <button type="button" @click="sendCommand(cmd)">▶</button>
     </div>
   </section>
 </template>
