@@ -1,0 +1,25 @@
+html,
+body {
+  --background: #2e2c42;
+  --foreground: #ece3f6;
+  --accent: #b78ed7;
+  --danger: #cf7070;
+
+  &:has(.melange-dark) {
+    --background: #161413;
+    --foreground: #ece1d7;
+    --accent: #ebc06e;
+  }
+
+  &:has(.catppuccin-mocha) {
+    --background: #1e1e2e;
+    --foreground: #cdd6f4;
+    --accent: #89b4fa;
+  }
+
+  &:has(.dracula) {
+    --background: #282a36;
+    --foreground: #f8f8f2;
+    --accent: #bd93f8;
+  }
+}

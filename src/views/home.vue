@@ -11,6 +11,10 @@ messages.loadMsgs()
 
 let cmd = ref('')
 
+const themes = ['melange-dark', 'catppuccin-mocha', 'dracula', 'pomboverso']
+
+const currentTheme = ref(themes[Math.floor(Math.random() * themes.length)])
+
 function submitCommand() {
   if (sendCommand(cmd.value)) {
     cmd.value = ''
@@ -19,7 +23,7 @@ function submitCommand() {
 </script>
 
 <template>
-  <main class="home">
+  <main class="home" :class="currentTheme">
     <header>
       <h1>Chat Geppetto</h1>
       <button type="button" @click="messages.clearMsgs">x</button>
