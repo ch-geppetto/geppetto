@@ -67,7 +67,9 @@ function submitCommand() {
           placeholder="Ask something..."
         />
 
-        <button type="submit">Send</button>
+        <button type="submit" :disabled="messages.isLoading">
+          {{ messages.isLoading ? '...' : 'Send' }}
+        </button>
       </form>
     </section>
   </main>

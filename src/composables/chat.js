@@ -4,12 +4,12 @@ import { askAi } from '@/api/ai'
 const max_len = 255
 
 async function sendCommand(cmd) {
-  const command = cmd.trim()
-  if (command === '' || command.length > max_len) {
-    return
-  }
-
   const messages = useMessages()
+
+  const command = cmd.trim()
+  if (command === '' || command.length > max_len || messages.isLoading) {
+    return false
+  }
 
   messages.addMsg(command, 'user')
   messages.isLoading = true

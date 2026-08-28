@@ -72,14 +72,17 @@ To further demonstrate your seniority or attention to detail, consider adding:
 - [x] Build Spinner
 - [x] Build TextBubble
 - [x] Build Alert
-- [x] Connect hugging face API
-
+- [x] Connect hugging-face API
+- [x] Add cleaning mechanism
 - [x] Add themes
 - [x] Add store to manage the UI state
 - [x] Add local storage to preserve chat
+- [x] Missing date from messages
+- [x] `Enter` submit, but `Enter + Shift` wont
+- [x] Prevent sending a message if the state is loading
 
 - [] Add markdown parser (still testing)
 
-- [] Missing date from messages
 - [] Missing development flag to hide debug when not on it
+- [] Add tests
 - [] Instructions on how to run the server with different modes
