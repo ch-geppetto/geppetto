@@ -5,7 +5,10 @@ import TextBubble from '@/components/text-bubble.vue'
 import Alert from '@/components/alert.vue'
 import { sendCommand } from '@/composables/chat.js'
 import { useMessages } from '@/stores/messages'
+
 const messages = useMessages()
+messages.loadMsgs()
+
 let cmd = ref('')
 
 function submitCommand() {
@@ -25,7 +28,7 @@ function submitCommand() {
         :class="{ me: message.role === 'user' }"
       >
         <template v-if="message.role === 'system-error'">
-          <Alert>Error!</Alert>
+          <Alert>{{ message.content }}</Alert>
         </template>
         <template v-else>
           {{ message.content }}
