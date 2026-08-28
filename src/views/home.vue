@@ -41,11 +41,7 @@ function toggleDebugger() {
       </pre>
     </section>
     <section class="output">
-      <TextBubble
-        v-for="(message, index) in messages.chat"
-        :key="index"
-        :class="{ me: message.role === 'user' }"
-      >
+      <TextBubble v-for="(message, index) in messages.chat" :key="index" :class="message.role">
         <template v-if="message.role === 'system-error'">
           <Alert class="error">{{ message.content }}</Alert>
         </template>

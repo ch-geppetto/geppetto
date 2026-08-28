@@ -1,4 +1,4 @@
------------------------------- Overview
+[![Tests](https://github.com/ch-geppetto/geppetto/actions/workflows/tests.yml/badge.svg)](https://github.com/ch-geppetto/geppetto/actions/workflows/sync-data.yml)
 
 # Technical Assessment
 
@@ -29,44 +29,6 @@ To further demonstrate your seniority or attention to detail, consider adding:
 - Explain Your Process: Provide the "how" and "why" behind your work through a written breakdown of your logic or a short video walkthrough.
 - Provide Solution Link: GitHub repository, GitHub Repo / Link to file or cloud document.
 
-## ------ Wireframe
-
-```
-┌───────────────────────────────────┐
-│                                   │
-│                                   │
-│                                   │
-├───────────────────────────────────┤
-│                Ask me anything  ▶ │
-└───────────────────────────────────┘
-
-┌───────────────────────────────────┐
-│                                   │
-│                                   │
-│                                   │
-├───────────────────────────────────┤
-│          How can I bake a cake  ▶ │
-└───────────────────────────────────┘
-
-┌───────────────────────────────────┐
-│           ◆ How can I bake a cake │
-│                                   │
-│ ◆ Thinking...                     │
-│                                   │
-├───────────────────────────────────┤
-│                                 ■ │
-└───────────────────────────────────┘
-
-┌───────────────────────────────────┐
-│           ◆ How can I bake a cake │
-│                                   │
-│ ◆ In order to bake a cake         │
-│   1 - ...                         │
-├───────────────────────────────────┤
-│                                 ■ │
-└───────────────────────────────────┘
-```
-
 ## ------ Tasks
 
 - [x] Build Spinner
@@ -84,10 +46,12 @@ To further demonstrate your seniority or attention to detail, consider adding:
 - [x] Debugger show only when needed
 - [x] Add unit tests
 - [x] Add workflows so it runs the tests
+- [x] Add screenshots
 
-- [] Add styles for custom HTML in the responses.
+## ------ Screenshots
 
-- [] Add screenshots
+![preview empty](./assets/screenshots/0.png)
+![preview chat](./assets/screenshots/1.png)
 
 ## ------ Install
 

@@ -1,6 +1,7 @@
 @import url(./stylesheets/root.css);
 @import url(./stylesheets/themes.css);
 @import url(./stylesheets/view_home.css);
+@import url(./stylesheets/markdown.css);
 
 section.debug {
   border: 1px solid var(--foreground);

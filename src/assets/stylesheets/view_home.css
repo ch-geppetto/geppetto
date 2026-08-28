@@ -57,19 +57,29 @@ main.home {
       margin: 0 0 1rem;
       white-space: break-spaces;
 
-      &:has(.error) > * {
-        background-color: var(--danger);
-      }
-
-      &.me {
+      &.user {
         justify-content: end;
+        padding-left: 2rem;
+
         > * {
           background-color: var(--accent);
         }
       }
 
-      > * {
+      &.assistant,
+      &.system-error {
+        padding-right: 2rem;
+      }
+
+      &.assistant > * {
         background-color: var(--foreground);
+      }
+
+      &.system-error > * {
+        background-color: var(--danger);
+      }
+
+      > * {
         border-radius: 5px;
         border: 0;
         color: var(--background);
