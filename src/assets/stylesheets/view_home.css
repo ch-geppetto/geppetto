@@ -16,9 +16,15 @@ main.home {
       text-transform: uppercase;
       color: var(--accent);
       display: inline-block;
+      flex-grow: 1;
     }
 
-    button {
+    .debug-btn {
+      font-size: 1.5rem;
+      color: var(--foreground);
+    }
+
+    .reset-btn {
       font-size: 2rem;
       color: var(--danger);
     }
@@ -51,18 +57,18 @@ main.home {
       margin: 0 0 1rem;
       white-space: break-spaces;
 
-      &:has(.error) span {
+      &:has(.error) > * {
         background-color: var(--danger);
       }
 
       &.me {
         justify-content: end;
-        > span {
+        > * {
           background-color: var(--accent);
         }
       }
 
-      > span {
+      > * {
         background-color: var(--foreground);
         border-radius: 5px;
         border: 0;

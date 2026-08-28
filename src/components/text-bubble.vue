@@ -1,3 +1,5 @@
 <template>
-  <pre class="text-bubble"><span><slot /></span></pre>
+  <div class="text-bubble">
+    <div><slot /></div>
+  </div>
 </template>

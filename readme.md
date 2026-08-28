@@ -80,9 +80,12 @@ To further demonstrate your seniority or attention to detail, consider adding:
 - [x] Missing date from messages
 - [x] `Enter` submit, but `Enter + Shift` wont
 - [x] Prevent sending a message if the state is loading
+- [x] Add markdown parser
+- [x] Debugger show only when needed
 
-- [] Add markdown parser (still testing)
+- [] Add styles for custom HTML in the responses.
 
-- [] Missing development flag to hide debug when not on it
+- [] Add screenshots
+
 - [] Add tests
 - [] Instructions on how to run the server with different modes

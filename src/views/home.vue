@@ -21,15 +21,21 @@ function submitCommand() {
     cmd.value = ''
   }
 }
+
+const showDebugger = ref(false)
+function toggleDebugger() {
+  showDebugger.value = !showDebugger.value
+}
 </script>
 
 <template>
   <main class="home" :class="currentTheme">
     <header>
       <h1>Chat Geppetto</h1>
-      <button type="button" @click="messages.clearMsgs">x</button>
+      <button type="button" class="debug-btn" @click="toggleDebugger">debug</button>
+      <button type="button" class="reset-btn" @click="messages.clearMsgs">x</button>
     </header>
-    <section class="debug">
+    <section class="debug" v-if="showDebugger">
       <pre>
         {{ messages.chat }}
       </pre>
