@@ -82,10 +82,11 @@ To further demonstrate your seniority or attention to detail, consider adding:
 - [x] Prevent sending a message if the state is loading
 - [x] Add markdown parser
 - [x] Debugger show only when needed
+- [x] Add unit tests
+
+- [] Add e2e tests
+- [] Add workflow so it runs the tests
 
 - [] Add styles for custom HTML in the responses.
 
 - [] Add screenshots
-
-- [] Add tests
-- [] Instructions on how to run the server with different modes
