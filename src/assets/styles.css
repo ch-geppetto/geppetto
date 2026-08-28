@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --fg: #cdd6f4;
+  --bg: #11111b;
+  --accent: #cba6f7;
+  --accent2: #89b4fa;
+}
+
+* {
+  /* outline: 1px solid #f0a; */
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+section.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  .output {
+    flex-grow: 1;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--accent2);
+
+    .text-bubble {
+      display: block;
+      display: flex;
+      width: 100%;
+      margin: 0 0 1rem;
+
+      &.me {
+        justify-content: end;
+      }
+
+      > span {
+        border-radius: 5px;
+        border: 1px solid var(--accent);
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .input {
+    position: relative;
+    #command {
+      border-radius: 5px;
+      border: 1px solid var(--accent2);
+      padding: 1rem;
+      width: 100%;
+      font-size: 1rem;
+      color: var(--fg);
+      max-height: 30vh;
+      overflow-y: auto;
+
+      &:empty {
+        &::before {
+          content: 'Ask me anything';
+        }
+      }
+    }
+
+    button {
+      background-color: var(--accent2);
+      position: absolute;
+      bottom: 2rem;
+      right: 1rem;
+      border-radius: 10px;
+      padding: 0.25rem 0.5rem;
+      border: 0;
+      display: flex;
+
+      &:hover {
+        background-color: var(--fg);
+        cursor: pointer;
+      }
+    }
+  }
+}
