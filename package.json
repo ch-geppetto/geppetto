@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
-    "test:unit": "vitest",
-    "test:e2e": "playwright test",
+    "test": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "format": "prettier --write --experimental-cli src/"
@@ -20,7 +19,6 @@
     "vue": "^3.5.40"
   },
   "devDependencies": {
-    "@playwright/test": "^1.61.1",
     "@tsconfig/node24": "^24.0.4",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^24.13.3",

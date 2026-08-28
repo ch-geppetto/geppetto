@@ -83,10 +83,22 @@ To further demonstrate your seniority or attention to detail, consider adding:
 - [x] Add markdown parser
 - [x] Debugger show only when needed
 - [x] Add unit tests
-
-- [] Add e2e tests
-- [] Add workflow so it runs the tests
+- [x] Add workflows so it runs the tests
 
 - [] Add styles for custom HTML in the responses.
 
 - [] Add screenshots
+
+## ------ Install
+
+Running the app
+
+```sh
+npm run dev
+```
+
+Running the unit tests
+
+```sh
+npm run test
+```
