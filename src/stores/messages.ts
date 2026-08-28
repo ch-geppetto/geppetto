@@ -5,6 +5,7 @@ const STORAGE_KEY = 'chat-geppetto-messages'
 
 export const useMessages = defineStore('messages', () => {
   const chat = ref([])
+  const isLoading = ref(false)
 
   function addMsg(content, role) {
     chat.value.push({ content, role })
@@ -36,5 +37,5 @@ export const useMessages = defineStore('messages', () => {
     localStorage.removeItem(STORAGE_KEY)
   }
 
-  return { chat, addMsg, loadMsgs, clearMsgs }
+  return { chat, isLoading, addMsg, loadMsgs, clearMsgs }
 })

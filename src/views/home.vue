@@ -37,10 +37,23 @@ function submitCommand() {
           {{ message.content }}
         </template>
       </TextBubble>
+      <TextBubble class="system" v-if="messages.isLoading">
+        <Spinner />
+      </TextBubble>
     </section>
     <section class="input">
-      <textarea id="command" v-model="cmd" @keydown.enter.prevent="submitCommand" />
-      <button type="button" @click="submitCommand">▶</button>
+      <form @submit.prevent="submitCommand">
+        <label for="command">Message</label>
+
+        <textarea
+          id="command"
+          v-model="cmd"
+          @keydown.enter.prevent="submitCommand"
+          placeholder="Ask something..."
+        />
+
+        <button type="submit">Send</button>
+      </form>
     </section>
   </main>
 </template>

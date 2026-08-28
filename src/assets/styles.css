@@ -49,6 +49,10 @@ main.home {
   gap: 1rem;
 
   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     h1 {
       margin: 0;
       text-transform: uppercase;
@@ -109,8 +113,11 @@ main.home {
     }
   }
 
-  .input {
+  .input form {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
     button {
       position: absolute;
@@ -131,12 +138,6 @@ main.home {
       color: var(--fg);
       margin: 0;
       resize: none;
-
-      &:empty {
-        &::before {
-          content: 'Ask me anything';
-        }
-      }
     }
   }
 }
