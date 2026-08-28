@@ -66,10 +66,3 @@ To further demonstrate your seniority or attention to detail, consider adding:
 │                                 ■ │
 └───────────────────────────────────┘
 ```
-
-## ------ Tasks
-
-- stylize a basic UI
-- get AI API
-- scrollbars look horrible
-- prepair organization so the chat can visualized

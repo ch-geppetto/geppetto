@@ -5,6 +5,7 @@ import TextBubble from '@/components/text-bubble.vue'
 import Alert from '@/components/alert.vue'
 import { sendCommand } from '@/composables/chat.js'
 import { useMessages } from '@/stores/messages'
+import { toMarkdown } from '@/utils/toMarkdown'
 
 const messages = useMessages()
 messages.loadMsgs()
@@ -28,6 +29,11 @@ function submitCommand() {
       <h1>Chat Geppetto</h1>
       <button type="button" @click="messages.clearMsgs">x</button>
     </header>
+    <section class="debug">
+      <pre>
+        {{ messages.chat }}
+      </pre>
+    </section>
     <section class="output">
       <TextBubble
         v-for="(message, index) in messages.chat"
@@ -36,6 +42,9 @@ function submitCommand() {
       >
         <template v-if="message.role === 'system-error'">
           <Alert class="error">{{ message.content }}</Alert>
+        </template>
+        <template v-else-if="message.role === 'assistant'">
+          <div v-html="toMarkdown(message.content)"></div>
         </template>
         <template v-else>
           {{ message.content }}
