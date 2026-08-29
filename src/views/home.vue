@@ -53,9 +53,7 @@ function toggleDebugger() {
         </template>
         <time :datetime="message.date">{{ message.date }}</time>
       </TextBubble>
-      <TextBubble class="system" v-if="messages.isLoading">
-        <Spinner />
-      </TextBubble>
+      <Spinner v-if="messages.isLoading" />
     </section>
     <section class="input">
       <form @submit.prevent="submitCommand">

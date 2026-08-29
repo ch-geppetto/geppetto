@@ -4,6 +4,12 @@
 
 <style scoped>
 .spinner {
+  background-color: var(--foreground);
+  border-radius: 5px;
+  border: 0;
+  color: var(--background);
+  padding: 0.5rem;
+
   &::before {
     content: 'Thinking ';
   }
