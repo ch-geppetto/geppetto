@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .text-bubble {
   display: flex;
   width: 100%;
@@ -38,11 +38,6 @@
     border: 0;
     color: var(--background);
     padding: 0.5rem;
-
-    time {
-      display: block;
-      font-size: 0.7rem;
-    }
   }
 }
 </style>

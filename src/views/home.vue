@@ -32,7 +32,7 @@ function toggleDebugger() {
   <main class="home" :class="currentTheme">
     <header>
       <h1>Chat Geppetto</h1>
-      <button type="button" class="debug-btn" @click="toggleDebugger">{{ "</>" }}</button>
+      <button type="button" class="debug-btn" @click="toggleDebugger">{{ '&lt;/&gt;' }}</button>
       <button type="button" class="reset-btn" @click="messages.clearMsgs">x</button>
     </header>
     <section class="debug" v-if="showDebugger">
@@ -122,6 +122,11 @@ main.home {
       color: var(--fg);
       cursor: pointer;
     }
+  }
+
+  time {
+    display: block;
+    font-size: 0.7rem;
   }
 
   .output {
