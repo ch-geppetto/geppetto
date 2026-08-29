@@ -61,7 +61,7 @@ Running the app
 npm run dev
 ```
 
-Running the unit tests
+Running unit tests
 
 ```sh
 npm run test

@@ -32,7 +32,7 @@ function toggleDebugger() {
   <main class="home" :class="currentTheme">
     <header>
       <h1>Chat Geppetto</h1>
-      <button type="button" class="debug-btn" @click="toggleDebugger">debug</button>
+      <button type="button" class="debug-btn" @click="toggleDebugger">{{ "</>" }}</button>
       <button type="button" class="reset-btn" @click="messages.clearMsgs">x</button>
     </header>
     <section class="debug" v-if="showDebugger">
@@ -40,7 +40,7 @@ function toggleDebugger() {
         {{ messages.chat }}
       </pre>
     </section>
-    <section class="output">
+    <section v-else class="output">
       <TextBubble v-for="(message, index) in messages.chat" :key="index" :class="message.role">
         <template v-if="message.role === 'system-error'">
           <Alert class="error">{{ message.content }}</Alert>
@@ -76,3 +76,99 @@ function toggleDebugger() {
     </section>
   </main>
 </template>
+
+<style scoped>
+main.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      margin: 0;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-block;
+      flex-grow: 1;
+    }
+
+    .debug-btn {
+      font-size: 1.5rem;
+      color: var(--foreground);
+    }
+
+    .reset-btn {
+      font-size: 2rem;
+      color: var(--danger);
+    }
+  }
+
+  button {
+    background-color: transparent;
+    color: var(--accent);
+    border-radius: 10px;
+    border: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+
+    &:hover {
+      color: var(--fg);
+      cursor: pointer;
+    }
+  }
+
+  .output {
+    flex-grow: 1;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-y: auto;
+    border: 1px solid var(--accent);
+  }
+
+  .input form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    button {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    textarea {
+      display: block;
+      border-radius: 5px;
+      border: 1px solid var(--accent);
+      background-color: transparent;
+      padding: 1rem;
+      padding-inline-end: 3rem;
+      width: 100%;
+      font-size: 1rem;
+      color: var(--fg);
+      margin: 0;
+      resize: none;
+    }
+  }
+
+  section.debug {
+    border: 1px solid var(--foreground);
+    overflow-y: auto;
+    border-radius: 5px;
+    min-height: 150px;
+    padding: 1rem;
+
+    pre {
+      white-space: pre-wrap;
+    }
+  }
+}
+</style>
