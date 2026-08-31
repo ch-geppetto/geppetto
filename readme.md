@@ -1,6 +1,48 @@
+# Technical Assessment
+
 [![Tests](https://github.com/ch-geppetto/geppetto/actions/workflows/tests.yml/badge.svg)](https://github.com/ch-geppetto/geppetto/actions/workflows/sync-data.yml)
 
-# Technical Assessment
+## ------ Walkthrough
+
+https://youtu.be/Nvnil4FBysM
+
+## ------ Screenshots
+
+![preview empty](./assets/screenshots/0.png)
+![preview chat](./assets/screenshots/1.png)
+
+## ------ Tasks
+
+- [x] Build Spinner
+- [x] Build TextBubble
+- [x] Build Alert
+- [x] Connect hugging-face API
+- [x] Add cleaning mechanism
+- [x] Add themes
+- [x] Add store to manage the UI state
+- [x] Add local storage to preserve chat
+- [x] Missing date from messages
+- [x] `Enter` submit, but `Enter + Shift` wont
+- [x] Prevent sending a message if the state is loading
+- [x] Add markdown parser
+- [x] Debugger show only when needed
+- [x] Add unit tests
+- [x] Add workflows so it runs the tests
+- [x] Add screenshots
+
+## ------ Install
+
+Running the app
+
+```sh
+npm run dev
+```
+
+Running unit tests
+
+```sh
+npm run test
+```
 
 ## ------ Notes
 
@@ -28,41 +70,3 @@ To further demonstrate your seniority or attention to detail, consider adding:
 - Prepare your response: Organize your thoughts clearly using a professional document editor or specialized tool.
 - Explain Your Process: Provide the "how" and "why" behind your work through a written breakdown of your logic or a short video walkthrough.
 - Provide Solution Link: GitHub repository, GitHub Repo / Link to file or cloud document.
-
-## ------ Tasks
-
-- [x] Build Spinner
-- [x] Build TextBubble
-- [x] Build Alert
-- [x] Connect hugging-face API
-- [x] Add cleaning mechanism
-- [x] Add themes
-- [x] Add store to manage the UI state
-- [x] Add local storage to preserve chat
-- [x] Missing date from messages
-- [x] `Enter` submit, but `Enter + Shift` wont
-- [x] Prevent sending a message if the state is loading
-- [x] Add markdown parser
-- [x] Debugger show only when needed
-- [x] Add unit tests
-- [x] Add workflows so it runs the tests
-- [x] Add screenshots
-
-## ------ Screenshots
-
-![preview empty](./assets/screenshots/0.png)
-![preview chat](./assets/screenshots/1.png)
-
-## ------ Install
-
-Running the app
-
-```sh
-npm run dev
-```
-
-Running unit tests
-
-```sh
-npm run test
-```
